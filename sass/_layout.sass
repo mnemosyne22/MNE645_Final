@@ -1,0 +1,75 @@
+// wRow -> 100%
+// wCol -> 100% / cols
+    
+@mixin columns($cols, $baseCol)
+    width: (100% * $cols) / $baseCol    
+    
+// WIDTH
+
+main
+    @include columns(12, 12)
+    margin: 0 auto
+    padding: 0 10px
+
+figure
+    @include columns(5, 12)
+    height: 190px
+	
+nav
+    @include columns(7, 12)
+    height: 190px
+    ul
+        margin-top: 95px
+        li
+            margin-right: 10px
+
+header
+    @include columns(12, 12)
+    padding-top: 40px
+    img
+        max-width: 100%
+        height: auto
+    h2
+        margin-bottom: 70px
+    h3
+        margin-bottom: 50px
+
+#headline
+    @include columns(12, 12)
+    height: 130px
+    margin: 0 auto
+    h1
+        padding-top: 50px
+
+#content
+    @include columns(12, 12)
+    margin: 20px
+    #products
+        @include columns(6, 12)
+        img
+            margin-right: 20px
+        article
+            margin-right: 20px
+            margin-bottom: 40px
+    #testimonials
+        @include columns(6, 12)
+        float: right
+
+.greybar
+    @include columns(12, 12)
+    height: 90px
+    padding-top: 30px
+
+footer
+    @include columns(12, 12)
+    height: 120px
+    padding-top: 50px
+
+.social-media
+    margin: 0 auto
+    width: 165px
+    div
+        margin-right: 5px
+    a
+        width: 36px
+        height: 36px
